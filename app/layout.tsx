@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -27,7 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="bg-slate-900 text-white p-4 text-center">
+          <p>Welcome to Next.js Crash Course</p>
+        </header>
         {children}
+        <footer className="bg-slate-900 text-white p-4 text-center">
+          by Amrita
+        </footer>
       </body>
     </html>
   );
